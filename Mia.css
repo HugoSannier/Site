@@ -23,6 +23,7 @@ body {
     grid-template-rows: 1fr;
 }
 
+/* *********** Side Panel ********** */
 .Main_Side_Panel {
     grid-row: 1/1;
     grid-column: 1/2;
@@ -73,11 +74,13 @@ body {
     font-weight: 300;
 }
 
-/* MAIN PANEL */
+/* ********************************** */
+
+/* ********* Main Panel ********* */
 
 .Main_Panel_Image {
-    height: 600px;
-    width: 60%;
+    height: 400px;
+    width: 80%;
 }
 
 .Main_Panel_Image img {
@@ -94,10 +97,9 @@ body {
 
 .Main_Panel_Title h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 40px;
     margin: 15px 15px 15px 0px;
-    letter-spacing: 4px;
 }
 
 .Main_Panel_Text p {
@@ -115,22 +117,18 @@ body {
 
 }
 
-.Main_Panel_Text h2{
+h2{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    letter-spacing: 1px;
-}
-
-.Main_Panel_Links li {
-    display: flex;
-    flex-direction: column;
-}
-
-.Main_Panel_Links li a {
-    font-family: Montserrat;
-    line-height: 25px;
     font-size: 14px;
-    font-weight: 400;
-    color: black;
-    text-decoration: underline;
+    margin-bottom: 15px;
+    color: grey;
 }
+ .video{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+    border-bottom: 1px grey solid;
+ }
+
+/* ****************************** */
