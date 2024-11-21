@@ -118,6 +118,17 @@ body {
 }
 
 
-.video {
+.video_container {
     padding-bottom: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px black solid;
+}
+
+.video{
+    margin-left: 40px;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
