@@ -28,6 +28,7 @@ body {
     grid-column: 1/2;
     background-color: #f5f5f5;
     height: 100%;
+    position: relative;
 }
 
 .Top_Picture {
@@ -77,9 +78,8 @@ body {
     margin-left: 25px;
     height: 100%;
     /* border: red solid 1px; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .Main_Panel_Title h1 {
@@ -91,134 +91,85 @@ body {
     grid-row: 1/5;
     grid-column: 1/2;
 }
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: rgb(156, 156, 156);
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 800px;
+}
 
 
-.Ar-Mare, .Mia, .Puppy, .Disco, .Triose {
+.Mia, .Puppy_Guard, .Disco, .Triose, .Ar-Mare {
     position: relative;
-    display: block;
-    max-width: 450px;
-    height: 500px;
-    /* border: 2px blue solid; */
-    padding: 20px;    
-    margin: auto;
-    /* border: 1px grey solid; */
-    transition: 0.2s ease-in;
-    margin-bottom: 40px;
+    /* border: red solid 2px ; */
+    margin-right: 200px;
+    margin-top: 80px;
 }
 
-.Ar-Mare:hover, .Mia:hover, .Puppy:hover, .Disco:hover, .Triose:hover{
-    border: 2px rgb(0, 0, 0) solid;
-    scale: 1.05;
+.Mia_Header, .Puppy_Header, .Disco_Header, .Triose_Header, .Ar-Mare_Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:  center;
+}
+.Mia_Cover, .Puppy_Cover, .Disco_Cover, .Triose_Cover, .Ar-Mare_Cover {
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.Ar-Mare{
-    grid-row: 2/3; 
-    grid-column: 1/2;
-}
-
-.Mia{
-    
-    grid-row: 2/3; 
-    grid-column: 2/3;
-}
-
-.Puppy {
-    grid-row: 2/3;
-    grid-column: 3/4;
-}
-
-.Disco {
-    grid-row: 2/3;
-    grid-column: 4/5;
-}
-
-.Triose {
-    grid-row: 3/4;
-    grid-column: 1/2;
-
-}
-
-/* ************ IMAGES ********** */
-img {
+.line {
+    height: 1px;
     width: 100%;
-    height: 100%;
-    object-fit:cover;    
-}
-.Ar-Mare img{
-    object-position: 100%;
+    background-color: grey;
+    margin-left: 10px;
 }
 
-.Mia img{
-    object-position: 70%;
+.Mia_VOD, .Puppy_VOD, .Disco_VOD, .Triose_VOD, .Ar-Mare_VOD {
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.Puppy img{
-    object-position: 48%;
+iframe {
+    border-radius: 30px;
+    max-height: 300px;
 }
 
-.Disco img{
-    object-position: 15%;
+p {
+    font-family: Montserrat;
+    margin:auto;
+    font-size: 16px;
 }
 
-.Triose img{
-    object-position: 70%;
-    object-fit: scale-down;
+.Itch_link {
+    margin-top: 20px;
+    border-bottom: 1px grey solid;
+}
+.Itch_link img{
+    /* border: red solid 2px ; */
+    max-height: 50px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* ************ ********** ********** */
-
-.Main_Panel p{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
+h3 {
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
     font-weight: 600;
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat';
-    text-align: center;
+    font-size: 20px;
 }
 
-.Ar-Mare:hover p{
-    display: block;
+footer {
+    height: 100px;
+    background-color:#f5f5f5 ;
 }
-
-.Ar-Mare:hover img{
-    filter: contrast(60%);
-}
-
-.Mia:hover p{
-    display: block;
-}
-
-.Mia:hover img{
-    filter: contrast(60%);
-}
-
-.Puppy:hover p{
-    display: block;
-}
-
-.Puppy:hover img{
-    filter: contrast(60%);
-}
-
-.Disco:hover p{
-    display: block;
-}
-
-.Disco:hover img{
-    filter: contrast(60%);
-}
-
-.Triose:hover p{
-    display: block;
-}
-
-.Triose:hover img{
-    filter: contrast(60%);
-}
-
-
-
