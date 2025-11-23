@@ -165,19 +165,16 @@ body {
 }
 
 .Main_Panel_Video {
-    height: 314px;
+    height: 530px;
     width: 950px;
     margin-left: 75px;
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
 }
 
 .Main_Panel_Video .video {
     height: 100%;
-    width: 442px;
-    border-radius: 30px;
+    width: 100%;
+    border-radius: 3px;
 }
 
 .Main_Panel_Text {

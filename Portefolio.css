@@ -123,9 +123,11 @@ body {
     width: 100%;
 }
 
+
+/* **** MAIN **** */
 .Main_Panel {
     border: solid 2px hsla(219, 28%, 46%, 0.1);
-    width: 1066px;
+    width: 90%;
     padding-right: 70px;
 }
 
@@ -158,16 +160,12 @@ body {
 .Main_Panel_Body {
     box-sizing: content-box;
     border-left: solid 1px #000000;
-    width: 1066px;
     display: block;
-    grid-row: 1/1;
-    grid-column: 2/2;
     position: relative;
 }
 
 .Main_Panel_Body .Vector_Title {
     display: flex;
-    /* margin-bottom: 20px; */
     transform: translateY(-50%);
 }
 
@@ -206,7 +204,6 @@ body {
 }
 
 .Summary {
-    /* border: 2px red solid; */
     margin-right: 70px;
     margin-left: 34px;
     position: relative;
@@ -214,27 +211,30 @@ body {
 }
 
 .Project_Thumbnail_Container {
-    /* border: 1px green solid; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     text-align: center;
 }
 
-.Project_Thumbnail a {
-
-    transition: .2s ease-in-out;
-    cursor: pointer;
-}
 
 .Project_Thumbnail .Thumbnail_Image {
-    max-width: 230px;
-    margin: 30px;
+    width: 90%;
+    max-height: 500px;
+    border-radius: 2px;
+    /* border: 2px red solid; */
+    /* margin: 30px; */
     margin-bottom: 10px;
+    transition: .2s ease-in-out;
+}
+
+.Project_Thumbnail img{
+    object-fit: contain;
 }
 
 .Project_Thumbnail .Thumbnail_Image:hover {
     scale: 1.05;
+    border-radius: 5px;
 }
 
 .Project_Thumbnail p {
@@ -272,7 +272,7 @@ body {
     margin-right: 200px;
     margin-top: 37px;
     margin-left: 34px;
-    width: 1000px;
+    /* width: 1000px; */
 }
 
 .Project_Header {
@@ -341,7 +341,7 @@ body {
     max-height: 100px;
     max-width: 180px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .line {
@@ -378,7 +378,7 @@ body {
 .Project_VOD .Game_Screenshot {
     width: 440;
     height: 230px;
-    border-radius: 35px;
+    border-radius: 5px;
 }
 
 .Project_VOD .Line_Below_VOD {
@@ -391,7 +391,7 @@ body {
 iframe {
     width: 440px;
     height: 235px;
-    border-radius: 30px;
+    border-radius: 5px;
 
 }
 
