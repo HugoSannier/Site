@@ -1,0 +1,306 @@
+@font-face {
+    font-family: Inter;
+    src: url(./Assets/Typographies/Inter/Inter-VariableFont_opsz\,wght.ttf)
+}
+
+@font-face {
+    font-family: KanitBold;
+    src: url(./Assets/Typographies/Kanit/Kanit-Bold.ttf )
+}
+
+@font-face {
+    font-family: KanitExtraBold;
+    src: url(./Assets/Typographies/Kanit/Kanit-ExtraBold.ttf )
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 118px;
+    width: 100%;
+    border-bottom: 1px black solid;
+    margin-bottom: 60px;
+}
+
+header canvas {
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.titleAndButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-right: 90px;
+    padding-top: 20px;
+}
+
+.titleName {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleName a {
+    text-decoration: none;
+    transition: 100ms;
+}
+
+.titleName a:hover {
+    scale: 1.01;
+}
+
+.titleName h1 {
+    width: 100%;
+    font-family: Inter;
+    font-weight: 1000;
+    color: rgb(255, 146, 50);
+    font-size: 50px;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+    line-height: 40px;
+
+}
+
+.titleName h2 {
+    font-family: KanitBold;
+    letter-spacing: 10%;
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+    paint-order: fill stroke;
+}
+
+.buttonCountainer {
+    display: flex;
+    width: 100%;
+    max-width: 619px;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+}
+
+
+.menuButton {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    height: 40px;
+    width: 80px;
+    list-style: none;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px black;
+    background-color: white;
+    position: relative;
+    transition: .2s;
+}
+
+#about,
+#games {
+    width: 88px;
+}
+
+#contact {
+    width: 120px;
+}
+
+.menuButton p {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+
+.menuButton:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.main {
+    padding-left: 75px;
+    padding-right: 40px;
+}
+
+
+
+
+.panel {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    z-index: 10;
+    /* background-color: rgb(243, 243, 243);
+    border: 1px solid black;
+    border-radius: 5px; */
+}
+
+.panel canvas {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.panel p .coloredText {
+    font-weight: 700;
+    color: rgb(255, 146, 50);
+
+}
+
+.videoContainer {
+    width: 100%;
+    height: 100%;
+    padding: 60px 5% 60px 5%;
+}
+
+.videoContainer .title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.videoContainer .title .triangle {
+    padding-right: 10px;
+    fill: white;
+}
+
+
+.videoContainer h2 {
+    font-family: KanitExtraBold;
+    letter-spacing: 10%;
+    font-size: 35px;
+    color: white;
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+    line-height: 25px;
+    margin: 20px 0px 20px 0px;
+
+}
+
+.videoContainer a {
+    font-family: Inter;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    padding-left: 5px;
+    transform: translateY(3px);
+
+}
+
+
+iframe {
+    width: 722px;
+    height: 404px;
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.textContainer {
+    padding: 60px 3% 60px 3%
+}
+
+.textContainer .title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.textContainer h2 {
+    font-family: KanitExtraBold;
+    letter-spacing: 10%;
+    font-size: 35px;
+    color: rgb(255, 146, 50);
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+    line-height: 25px;
+    margin: 20px 0px 20px 0px;
+}
+
+
+.textContainer p {
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+footer {
+    margin-top: 60px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+footer canvas {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    border: 1px black solid;
+}
+
+footer .footerLogo {
+    width: 100%;
+    padding-left: 50%;
+    padding-top: 20px;
+}
+
+.footerLogo .menuButton {
+    width: 40px;
+    height: 40px;
+    /* border: 2px green solid; */
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo img {
+    object-fit: cover;
+}
+
+.footerText {
+    padding-top: 10px;
+    padding-left: 1%;
+    /* border: 2px green solid; */
+    width: 40%;
+}
+
+.footerText .name {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footerText .mail {
+    font-family: Inter;
+    font-weight: light;
+    font-size: 15px;
+}

@@ -1,0 +1,374 @@
+@font-face {
+    font-family: Inter;
+    src: url(./Assets/Typographies/Inter/Inter-VariableFont_opsz\,wght.ttf)
+}
+
+@font-face {
+    font-family: KanitBold;
+    src: url(./Assets/Typographies/Kanit/Kanit-Bold.ttf )
+}
+
+@font-face {
+    font-family: KanitExtraBold;
+    src: url(./Assets/Typographies/Kanit/Kanit-ExtraBold.ttf )
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 118px;
+    width: 100%;
+    border-bottom: 1px black solid;
+    margin-bottom: 40px;
+}
+
+header canvas {
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.titleAndButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-right: 90px;
+    padding-top: 20px;
+}
+
+.titleName {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleName a {
+    text-decoration: none;
+    transition: 100ms;
+}
+
+.titleName a:hover {
+    scale: 1.01;
+}
+
+.titleName h1 {
+    width: 100%;
+    font-family: Inter;
+    font-weight: 1000;
+    color: rgb(255, 146, 50);
+    font-size: 50px;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+    line-height: 40px;
+
+}
+
+.titleName h2 {
+    font-family: KanitBold;
+    letter-spacing: 10%;
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+    paint-order: fill stroke;
+}
+
+.buttonCountainer {
+    display: flex;
+    width: 100%;
+    max-width: 619px;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+}
+
+
+.menuButton {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    height: 40px;
+    width: 80px;
+    list-style: none;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px black;
+    background-color: white;
+    position: relative;
+    transition: .2s;
+}
+
+#about,
+#games {
+    width: 88px;
+}
+
+#contact {
+    width: 120px;
+}
+
+.menuButton p {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+
+.menuButton:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.main {
+    margin-left: 75px;
+    margin-right: 110px;
+    position: relative;
+}
+
+p .coloredText {
+    font-weight: 700;
+    color: rgb(255, 146, 50);
+}
+
+.mainTitle h1 {
+    font-family: Inter;
+    font-size: 50px;
+    color: rgb(255, 146, 50);
+    paint-order: stroke fill;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    line-height: auto;
+}
+
+.mainTitle h2 {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.project {
+    margin-top: 45px;
+    padding: 40px 40px 40px 40px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.project canvas {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    border: 1px black solid;
+    border-radius: 5px;
+
+}
+
+.projectThumbnail {
+    margin-right: 65px;
+    min-width: 290px;
+}
+
+.projectThumbnail img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.infosTitle h1 {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: auto;
+}
+
+.infosLabels ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+    margin-bottom: 25px;
+    width: 435px;
+    justify-content: left
+}
+
+.label {
+    border: 1px black solid;
+    border-radius: 40px;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    box-shadow: 5px 5px 0px black;
+    transition: 200ms;
+    margin-right: 20px;
+}
+
+.label:hover {
+    box-shadow: none;
+    transform: translate(5px, 5px);
+
+}
+
+.label p {
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 700;
+    text-align: center;
+}
+
+#labelUnity,
+#labelWwise {
+    width: 110px;
+}
+
+.infosText p {
+    /* border: 2px red solid; */
+    padding-right: 70px;
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.infosText a:visited {
+    text-decoration: black;
+}
+
+.infosText a p {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    margin-top: 16px;
+    text-decoration: underline black;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.infosText a p:hover {
+    letter-spacing: .5%;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 2;
+}
+
+.overlay .videoContainer {
+    width: 1400px;
+    height: 830px;
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px black solid;
+}
+
+.overlay .cross {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.overlay .cross a {
+    cursor: pointer;
+}
+
+.overlay .video {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay iframe {
+    width: 1216px;
+    height: 687px;
+    border-radius: 5px;
+    display: none;
+}
+
+.overlay .show {
+    display: block;
+}
+
+footer {
+    margin-top: 105px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+footer canvas {
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    border: 1px black solid;
+}
+
+footer .footerLogo {
+    width: 100%;
+    padding-left: 50%;
+    padding-top: 20px;
+}
+
+.footerLogo .menuButton {
+    width: 40px;
+    height: 40px;
+    /* border: 2px green solid; */
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo img {
+    object-fit: cover;
+}
+
+.footerText {
+    padding-top: 10px;
+    padding-left: 1%;
+    /* border: 2px green solid; */
+    width: 40%;
+}
+
+.footerText .name {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footerText .mail {
+    font-family: Inter;
+    font-weight: light;
+    font-size: 15px;
+}
