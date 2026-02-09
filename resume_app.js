@@ -1,10 +1,12 @@
 import PointInDiv from "./PointInDiv.js"
 const header = document.querySelector("header")
 const menuButtonsHeader = document.querySelectorAll(".menuButton.headerButton")
+const projectLabels = document.querySelectorAll(".label")
 const menuButtonsFooter = document.querySelectorAll(".menuButton.footerButton")
 const panel = document.querySelector(".panel")
 const footer = document.querySelector("footer")
 const coloredElements = document.querySelectorAll(".coloredText")
+var lastRndColor = "rgb(255, 146, 50)"
 
 
 
@@ -53,20 +55,29 @@ function Init(){
         menuButtonsFooter[i].addEventListener("mouseenter", MouseEnteredButtonFooter)
         menuButtonsFooter[i].addEventListener("mouseleave", MouseLeftButtonFooter)
     }
+
+    for (let i = 0; i < projectLabels.length; i++) {
+        projectLabels[i].addEventListener('mouseenter',MouseEnteredProjectLabel)
+        projectLabels[i].addEventListener('mouseleave',MouseLeftProjectLabel)
+        
+    }
+
     document.addEventListener('mousemove', StopCanvaIfMouseStopped)
-
-
+    
+    
     header.addEventListener('mouseenter',MouseEnteredHeader)
     header.addEventListener('mouseleave',MouseLeftHeader)
 
     panel.addEventListener('mouseenter', MouseEnteredPanel)
     panel.addEventListener('mouseleave', MouseLeftPanel)
-
+    
     footer.addEventListener("mouseenter", MouseEnteredFooter)
     footer.addEventListener("mouseleave", MouseLeftFooter)
 
     var rndColor = GetRandomColor(colors);
+    lastRndColor = rndColor
     ChangeElementsColor(coloredElements, rndColor)
+
 }
 
 function StopCanvaIfMouseStopped(e)
@@ -116,8 +127,8 @@ function MouseEnteredButtonHeader(e){
 
     var rndColor = GetRandomColor(colors);
     e.target.style.backgroundColor = rndColor;
+    lastRndColor = rndColor
     ChangeElementsColor(coloredElements, rndColor)
-    localp5.PlayButtonHoverAudio(localp5)
 }
 
 function MouseLeftButtonHeader(e){
@@ -131,13 +142,17 @@ function MouseLeftButtonHeader(e){
     pointInDivFooter.resetCirclesPosition();
     pointInDivFooter.areCirclesHopping = false
     pointInDivFooter.areCirclesFollowMouse = false
-
-    //panel
-    // pointInDivPanel.resetCirclesColor()
-    // pointInDivPanel.resetCirclesPosition()
-    // pointInDivPanel.areCirclesHopping = false
-    // pointInDivPanel.areCirclesFollowMouse= false
     
+    e.target.style.backgroundColor = "white";
+}
+
+
+
+function MouseEnteredProjectLabel(e) {
+    e.target.style.backgroundColor = lastRndColor;
+}
+
+function MouseLeftProjectLabel(e){
     e.target.style.backgroundColor = "white";
 }
 
@@ -179,6 +194,7 @@ function MouseEnteredButtonFooter(e){
 
     var rndColor = GetRandomColor(colors);
     e.target.style.backgroundColor = rndColor;
+    lastRndColor = rndColor
     
     ChangeElementsColor(coloredElements, rndColor)
 }
@@ -226,5 +242,26 @@ function ChangeElementsColor(Elements, color){
         element.style.fill = color
         
     }
+}
+
+function HandleOverlayDisplay() {
+    console.log(isOverlayDisplayed)
+
+    if(isOverlayDisplayed){
+        overlay.style.display = "none"
+        isOverlayDisplayed = false;
+        currentDisplayedVideo.classList.remove("show")
+        return;
+
+
+    }
+
+    if(!isOverlayDisplayed){
+        overlay.style.display = "block"
+        isOverlayDisplayed = true;
+        return;
+
+    }
+    
 }
 
