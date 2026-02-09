@@ -177,6 +177,14 @@ header canvas {
 
 }
 
+.panel p {
+    transition: 100ms;
+}
+
+.panel p:hover {
+    background-color: rgba(165, 165, 165, 0.37);
+}
+
 .videoContainer {
     width: 100%;
     height: 100%;

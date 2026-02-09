@@ -185,7 +185,14 @@ p .coloredText {
     position: absolute;
     border: 1px black solid;
     border-radius: 5px;
+}
 
+.game .infosText p {
+    transition: 300ms;
+}
+
+.game .infosText p:hover {
+    background-color: rgba(165, 165, 165, 0.3);
 }
 
 .gameThumbnail {
