@@ -54,6 +54,7 @@ export default class PointInDiv
         }
       }
 
+
       function FillWithCircle(p5, _areaX, _areaY, _circleSize, _circleGap, _color)
       {
         var _amountNeededX = p5.floor((_areaX - _circleGap/2) / (_circleSize + _circleGap));
@@ -76,6 +77,14 @@ export default class PointInDiv
 
       
     }, div);    
+  }
+
+  
+  SelfDestroy()
+  {
+    this.p5.removeElements()
+    console.log("destroyed")
+
   }
 
   activate()

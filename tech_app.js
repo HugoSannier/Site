@@ -131,6 +131,8 @@ function Init(){
     lastRndColor = rndColor
     ChangeElementsColor(coloredElements, rndColor)
 
+    window.addEventListener("resize", ResizeCanvas)
+
 }
 
 function StopCanvaIfMouseStopped(e)
@@ -295,6 +297,11 @@ function MouseLeftButtonFooter(e){
 }
 
 // Tool functions
+
+function ResizeCanvas(){
+
+    location.reload()
+}
 
 function GetRandomColor(pool){
     var isNewColorFound = false

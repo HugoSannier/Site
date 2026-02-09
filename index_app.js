@@ -65,6 +65,8 @@ function Init(){
     footer.addEventListener("mouseenter", MouseEnteredFooter)
     footer.addEventListener("mouseleave", MouseLeftFooter)
 
+    window.addEventListener("resize", ResizeCanvas)
+
     var rndColor = GetRandomColor(colors);
     ChangeElementsColor(coloredElements, rndColor)
 }
@@ -94,6 +96,7 @@ function StopCanvaIfMouseStopped(e)
     }
 }
 
+//#region Header
 // Header Interaction
 function MouseEnteredHeader(){
     pointInDivHeader.activate()
@@ -140,8 +143,9 @@ function MouseLeftButtonHeader(e){
     
     e.target.style.backgroundColor = "white";
 }
+//#endregion
 
-//Panel Interaction
+//#region Panel Interaction
 function MouseEnteredPanel(){
     pointInDivPanel.activate()
     pointInDivPanel.areCirclesFollowMouse = true
@@ -154,8 +158,9 @@ function MouseLeftPanel(){
     currentActiveDivPoint = undefined;
     pointInDivPanel.desactivate()
 }
+//#endregion
 
-
+//#region footer
 //Footer Interaction
 function MouseEnteredFooter(){
     currentActiveDivPoint = pointInDivFooter;
@@ -190,9 +195,13 @@ function MouseLeftButtonFooter(e){
 
     e.target.style.backgroundColor = "white"
 }
+//#endregion
 
 // Tool functions
+function ResizeCanvas(){
 
+    location.reload()
+}
 function GetRandomColor(pool){
     var isNewColorFound = false
     
