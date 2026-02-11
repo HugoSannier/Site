@@ -120,7 +120,6 @@ function MouseEnteredButtonHeader(e){
     var rndColor = GetRandomColor(colors);
     e.target.style.backgroundColor = rndColor;
     ChangeElementsColor(coloredElements, rndColor)
-    localp5.PlayButtonHoverAudio(localp5)
 }
 
 function MouseLeftButtonHeader(e){

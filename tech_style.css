@@ -32,7 +32,6 @@ body {
 }
 
 header {
-    height: 118px;
     width: 100%;
     border-bottom: 1px black solid;
     margin-bottom: 40px;
@@ -119,11 +118,11 @@ header canvas {
 
 #about,
 #games {
-    width: 88px;
+    min-width: 88px;
 }
 
 #contact {
-    width: 120px;
+    min-width: 120px;
 }
 
 .menuButton p {
@@ -144,8 +143,8 @@ header canvas {
 }
 
 .main {
-    margin-left: 75px;
-    margin-right: 110px;
+    margin-left: 5%;
+    margin-right: 5%;
     position: relative;
 }
 
@@ -176,6 +175,7 @@ p .coloredText {
     display: flex;
     flex-direction: row;
     position: relative;
+    /* border: 2px red solid; */
 }
 
 .project canvas {
@@ -190,13 +190,15 @@ p .coloredText {
 
 .projectThumbnail {
     margin-right: 65px;
-    min-width: 290px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .projectThumbnail img {
     width: 100%;
     border-radius: 5px;
 }
+
 
 .infosTitle h1 {
     font-family: Inter;
@@ -210,7 +212,6 @@ p .coloredText {
     flex-direction: row;
     margin-top: 13px;
     margin-bottom: 25px;
-    width: 435px;
     justify-content: left
 }
 
@@ -345,6 +346,7 @@ footer .footerLogo {
     width: 100%;
     padding-left: 50%;
     padding-top: 20px;
+    margin-right: 5%;
 }
 
 .footerLogo .menuButton {
@@ -378,39 +380,45 @@ footer .footerLogo {
     font-size: 15px;
 }
 
-.telBlocker {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    display: none;
-    height: 100%;
-    width: 100vw;
-    z-index: 100;
-    background-color: white;
-    overflow: hidden;
+@media only screen and (max-width: 1380px) {
+    .titleName h2 {
+        display: none;
+    }
 }
 
-.telBlocker .textContainer {
-    /* border: 2px red solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+@media only screen and (max-width: 1080px) {
+    .titleName {
+        display: none;
+    }
+
+    header {
+        padding-bottom: 25px;
+    }
+
+    .project{
+        flex-direction: column;
+    }
+
 }
 
-.telBlocker .textContainer h1 {
-    height: 100%;
-    text-align: center;
-    padding-top: 100px;
+@media only screen and (max-width: 673px) {
+    header .buttonCountainer {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 600;
-}
+    .buttonCountainer a {
+        margin-top: 15px;
+        width: 100%;
+    }
 
-@media only screen and (max-width: 1620px) {
-    .telBlocker {
-        display: block;
+    footer .footerText{
+        display: none;
+    }
+
+    footer .footerLogo{
+        padding-left: 0px;
+        padding-top: 0px;
     }
 
 }
