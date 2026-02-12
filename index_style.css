@@ -100,6 +100,10 @@ header canvas {
     justify-content: space-around;
 }
 
+footer .buttonCountainer a {
+    margin-top: 15px;
+}
+
 
 .menuButton {
     text-decoration: none;
@@ -186,7 +190,7 @@ header canvas {
 
 .videoContainer {
     width: 100%;
-    min-height: 700px;
+    max-height: 800px;
     padding: 60px 5% 60px 5%;
 }
 
@@ -319,6 +323,10 @@ footer .footerLogo {
 
     .panel{
         flex-direction: column;
+    }
+
+    .videoContainer{
+        min-height: 800px;
     }
 
 }

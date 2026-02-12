@@ -199,6 +199,15 @@ p .coloredText {
     border-radius: 5px;
 }
 
+.projectThumbnail img:hover{
+    cursor: pointer;
+}
+
+.projectThumbnail a {
+    height: 100%;
+    width: 100%;
+}
+
 
 .infosTitle h1 {
     font-family: Inter;
@@ -269,6 +278,10 @@ p .coloredText {
     text-decoration: underline black;
     cursor: pointer;
     transition: 100ms;
+}
+
+.infosText a{
+    text-decoration: none;
 }
 
 .infosText a p:hover {

@@ -211,6 +211,10 @@ p .coloredText {
     color: rgb(255, 146, 50);
 }
 
+.panelText a{
+    text-decoration: none;
+}
+
 .panelImage{
     display: flex;
     justify-content: center;
