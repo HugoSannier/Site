@@ -10,6 +10,7 @@ const game2 = document.getElementById("game2")
 const game3 = document.getElementById("game3")
 const game4 = document.getElementById("game4")
 const game5 = document.getElementById("game5")
+const game6 = document.getElementById("game6")
 var lastRndColor = "rgb(255, 146, 50)"
 
 
@@ -20,6 +21,7 @@ var pointInDivGame2 = new PointInDiv(5, 20, 40, (243,243,243),(219,219,219), gam
 var pointInDivGame3 = new PointInDiv(5, 20, 40, (243,243,243),(219,219,219), game3)
 var pointInDivGame4 = new PointInDiv(5, 20, 40, (243,243,243),(219,219,219), game4)
 var pointInDivGame5 = new PointInDiv(5, 20, 40, (243,243,243),(219,219,219), game5)
+var pointInDivGame6 = new PointInDiv(5, 20, 40, (243,243,243),(219,219,219), game6)
 var pointInDivFooter = new PointInDiv(5, 10, 20, (243,243,243),(219,219,219), footer)
 var currentActiveDivPoint
 
@@ -73,6 +75,9 @@ Init()
 
 function Init(){
 
+
+
+
     //add event enter on Menu Buttons
     for (let i = 0; i< menuButtonsHeader.length; i++){
         menuButtonsHeader[i].addEventListener("mouseenter", MouseEnteredButtonHeader)
@@ -109,6 +114,9 @@ function Init(){
 
     game5.addEventListener('mouseenter', MouseEnteredGame5)
     game5.addEventListener('mouseleave', MouseLeftGame5)
+
+    game6.addEventListener('mouseenter', MouseEnteredGame6)
+    game6.addEventListener('mouseleave', MouseLeftGame6)
     
 
     footer.addEventListener("mouseenter", MouseEnteredFooter)
@@ -244,6 +252,18 @@ function MouseLeftGame5(){
     pointInDivGame5.resetCirclesPosition();
     pointInDivGame5.areCirclesFollowMouse = false;
     pointInDivGame5.desactivate()
+}
+
+function MouseEnteredGame6(){
+    pointInDivGame6.areCirclesFollowMouse = true;
+    pointInDivGame6.activate()
+}
+
+function MouseLeftGame6(){
+    pointInDivGame6.resetCirclesColor();
+    pointInDivGame6.resetCirclesPosition();
+    pointInDivGame6.areCirclesFollowMouse = false;
+    pointInDivGame6.desactivate()
 }
 
 function MouseEnteredProjectLabel(e) {
